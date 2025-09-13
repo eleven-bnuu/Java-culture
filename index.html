@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<title>
+Java Culture
+</title>
+<script src="https://cdn.tailwindcss.com">
+</script>
+<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+<link rel="icon" href="./img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="relative min-h-screen flex flex-col justify-between items-center text-center bg-ireng overflow-hidden">
+<!-- Background -->
+<img src="./img/bgidx.jpg" alt="Background"
+class="absolute inset-0 w-full h-full object-cover" />
+
+<!-- Atas -->
+<div class="relative z-10 pt-3">
+<p class="font-geist text-coklat text-sm">
+Wedding Invitation
+</p>
+<h3 class="font-jawa text-coklat text-5xl mt-8">Bro &amp; Sis</h3>
+</div>
+
+<!-- tengah -->
+<div class="relative my-4 rounded-tl-[80px] rounded-br-[80px] w-[170px] h-[200px] border-4 border-coklat overflow-hidden">
+  <img 
+    src="./img/ft4.jpg" 
+    alt="" 
+    class="w-full h-full object-cover" />
+</div>
+
+<!-- Bawah -->
+<div class="relative z-10 mb-[90px] flex flex-col items-center">
+<p class="text-coklat text-base mb-2 font-geist">
+Kepada Yth. Bapak/Ibu/Saudara/i
+</p>
+<h3 id="penerima" class="text-3xl font-unna text-coklat mb-3">Oktaviani Putri Kinasih</h3>
+
+<a href="home.html" id="enterBtn">
+<button class="px-4 py-2 text-krem rounded-full bg-coklat">
+Buka Undangan
+</button>
+</a>
+
+</div>
+<!-- script musik autoscroll -->
+<script>
+document.getElementById("enterBtn").addEventListener("click", () => {
+localStorage.setItem("autoplay", "true"); // kasih trigger
+window.location.href = "home.html";
+});
+</script>
+<!-- script param -->
+<script>
+// Ambil parameter dari URL
+const urlParams = new URLSearchParams(window.location.search);
+const nama = urlParams.get('to'); // baca nilai ?to=
+
+// Kalau ada nama → tampilkan di <h3>
+if (nama) {
+document.getElementById("penerima").innerText = nama;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+@font-face {
+    font-family: "Jawa"; /* nama bebas */
+    src: url("./font/Jawa.ttf") format("truetype");
+    font-weight: normal; /* bisa juga 400, 700 */
+    font-style: normal; /* normal, italic */
+}
+
+.font-jawa {
+    font-family: "Jawa", sans-serif;
+}
+
+.font-geist {
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-unna {
+  font-family: "Unna", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-coklat {
+    color: #683b1e;
+}
+
+.text-krem {
+    color: #cdb599;
+}
+
+.text-ireng {
+    color: #1f1f1f;
+}
+
+.bg-ireng {
+    background-color: #1f1f1f;
+}
+
+.bg-coklat {
+    background-color: #683b1e;
+}
+
+.bg-krem {
+    background-color: #cdb599;
+}
+
+#bg-blur {
+    transition: background-image 0.6s ease-in-out;
+}
+
+.border-coklat {
+    border-color: #683b1e;
+}
+
+.border-ireng {
+  border-color: #1f1f1f;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 15px; /* agak naik biar ada jarak dari bawah */
+    left: 50%; /* mulai dari tengah */
+    transform: translateX(-50%); /* geser biar benar2 center */
+    width: 70%;
+    height: 50px;
+    background: #683b1e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 9999px; /* biar full rounded (pill shape) */
+    padding: 0 10px; /* kasih padding kanan kiri */
+}
+
+.bottom-nav a {
+    flex: 1;
+    color: #cdb599;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.bottom-nav a .icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto 2px;
+    display: block;
+}
+
+.bottom-nav a span {
+    display: block;
+}
+
+.bottom-nav a:hover {
+    color: #cdb599;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-btn {
+    position: fixed; /* wajib biar lepas dari section */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #683b1e;
+    color: #cdb599;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 99999; /* jauh lebih tinggi dari z-40 Hero */
+    cursor: pointer;
+}
+
+#btn-music {
+    position: fixed;
+    bottom: 130px; /* lebih tinggi dari scroll */
+    right: 20px;
+    z-index: 9999;
+}
+
+#btn-scroll {
+    position: fixed;
+    bottom: 80px; /* paling bawah */
+    right: 20px;
+    z-index: 9999;
+}
+
+    /* Gunakan grid-area supaya rapi */
+ .heart-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr); /* 1fr biar rata */
+  gap: 4px;
+  grid-template-areas:
+    ". a a b ."
+    "c a a b d"
+    "c e f g d"
+    "h e i g j"
+    ". h i j .";
+}
+
+.heart-grid > div {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
+.e { grid-area: e; }
+.f { grid-area: f; }
+.g { grid-area: g; }
+.h { grid-area: h; }
+.i { grid-area: i; }
+.j { grid-area: j; }
